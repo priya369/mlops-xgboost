@@ -88,7 +88,6 @@ try:
         template_path='pipeline.yaml',  # Use local YAML file
         pipeline_root=f'gs://{BUCKET_NAME}/pipeline_root/',
         parameter_values={
-            "PROJECT_ID": PROJECT_ID,
             'bq_table': BQ_TABLE
         }
     )
