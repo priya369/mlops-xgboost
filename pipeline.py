@@ -24,7 +24,12 @@ BQ_TABLE = f'{PROJECT_ID}.mlops_project.house_prices'
 # ============= COMPONENT 1: Load Data =============
 @component(
     base_image='python:3.9',
-    packages_to_install=['google-cloud-bigquery>=3.11.0', 'pandas>=2.0.0', 'scikit-learn>=1.3.0']
+    packages_to_install = [
+    'google-cloud-bigquery>=3.11.0',
+    'pandas>=2.0.0',
+    'scikit-learn>=1.3.0',
+    'db-dtypes>=1.1.1'
+]
 )
 def load_data_component(
     bq_table: str,
