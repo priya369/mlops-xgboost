@@ -8,7 +8,7 @@ import sys
 import time
 
 # Configuration
-PROJECT_ID = os.getenv('GCP_PROJECT_ID') or os.getenv('GOOGLE_CLOUD_PROJECT')
+PROJECT_ID = os.getenv('PROJECT_ID') or os.getenv('GOOGLE_CLOUD_PROJECT')
 if not PROJECT_ID:
     PROJECT_ID = input("Enter your GCP Project ID: ")
 
