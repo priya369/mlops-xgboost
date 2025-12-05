@@ -15,7 +15,7 @@ from kfp import dsl, compiler
 from kfp.v2.dsl import component, Input, Output, Artifact
 
 # ============= CONFIGURATION =============
-PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'YOUR_PROJECT_ID')
+PROJECT_ID = os.getenv('PROJECT_ID', 'data-oasis-472909-u4')
 REGION = 'us-central1'
 BUCKET_NAME = f"{PROJECT_ID}-mlops-bucket"
 BQ_TABLE = f'{PROJECT_ID}.mlops_project.house_prices'
@@ -39,7 +39,7 @@ def load_data_component(
     print(f"📊 Loading data from: {bq_table}")
     
     # Query data
-    client = bigquery.Client()
+    client = bigquery.Client(project='data-oasis-472909-u4')
     query = f"SELECT * FROM `{bq_table}` LIMIT 1000"
     df = client.query(query).to_dataframe()
     
