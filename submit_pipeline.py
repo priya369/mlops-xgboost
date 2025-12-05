@@ -21,7 +21,7 @@ print("="*80)
 print("\n📝 Step 1: Compiling pipeline...")
 try:
     import subprocess
-    result = subprocess.run([sys.executable, 'pipeline_v2_corrected.py'], 
+    result = subprocess.run([sys.executable, 'pipeline.py'], 
                           capture_output=True, text=True)
     print(result.stdout)
     if result.returncode != 0:
