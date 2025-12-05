@@ -8,7 +8,7 @@ import os
 import sys
 
 # Configuration
-PROJECT_ID = os.getenv('GCP_PROJECT_ID') or input("Enter your GCP Project ID: ")
+PROJECT_ID = os.getenv('PROJECT_ID') or input("Enter your GCP Project ID: ")
 REGION = 'us-central1'
 BUCKET_NAME = f"{PROJECT_ID}-mlops-bucket"
 BQ_TABLE = f'{PROJECT_ID}.mlops_project.house_prices'
