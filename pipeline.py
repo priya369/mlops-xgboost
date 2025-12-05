@@ -15,7 +15,7 @@ from kfp import dsl, compiler
 from kfp.v2.dsl import component, Input, Output, Artifact
 
 # ============= CONFIGURATION =============
-PROJECT_ID = os.getenv('PROJECT_ID', 'data-oasis-472909-u4')
+PROJECT_ID = 'data-oasis-472909-u4'
 REGION = 'us-central1'
 BUCKET_NAME = f"{PROJECT_ID}-mlops-bucket"
 BQ_TABLE = f'{PROJECT_ID}.mlops_project.house_prices'
