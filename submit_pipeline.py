@@ -8,7 +8,7 @@ import os
 import sys
 
 # Configuration
-PROJECT_ID = os.getenv('PROJECT_ID') or input("Enter your GCP Project ID: ")
+PROJECT_ID = 'data-oasis-472909-u4'
 REGION = 'us-central1'
 BUCKET_NAME = f"{PROJECT_ID}-mlops-bucket"
 BQ_TABLE = f'{PROJECT_ID}.mlops_project.house_prices'
@@ -88,6 +88,7 @@ try:
         template_path='pipeline.yaml',  # Use local YAML file
         pipeline_root=f'gs://{BUCKET_NAME}/pipeline_root/',
         parameter_values={
+            "PROJECT_ID": PROJECT_ID,
             'bq_table': BQ_TABLE
         }
     )
