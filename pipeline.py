@@ -300,8 +300,8 @@ def evaluate_model_component(
     
     # Write to BigQuery
     try:
-        bq = bigquery.Client(project=PROJECT_ID)
-        table_id = f"{PROJECT_ID}.mlops_project.model_evaluation_scores"
+        bq = bigquery.Client(project='data-oasis-472909-u4')
+        table_id = "data-oasis-472909-u4.mlops_project.model_evaluation_scores"
         
         # Create table if not exists
         try:
