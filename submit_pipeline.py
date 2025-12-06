@@ -72,19 +72,14 @@ try:
     
     # Initialize
     aip.init(
-        project='data-oasis-472909-u4',
-        location='us-central1',
-        staging_bucket= 'gs://data-oasis-472909-u4-mlops-bucket'
+        project="data-oasis-472909-u4",
+        location="us-central1",
+        staging_bucket="gs://data-oasis-472909-u4-mlops-bucket"
     )
-    
-    print(f"✓ Initialized Vertex AI")
-    print(f"   Project: {PROJECT_ID}")
-    print(f"   Region: {REGION}")
-    print(f"   Bucket: gs://{BUCKET_NAME}")
     
     # Create pipeline job
     job = aip.PipelineJob(
-        display_name='xgboost-mlops-pipeline-v3',
+        display_name='mlops-xgboost-pipeline-v4',
         template_path='pipeline.yaml',  # Use local YAML file
         pipeline_root=f'gs://{BUCKET_NAME}/pipeline_root/',
         parameter_values={
@@ -93,7 +88,7 @@ try:
     )
     
     print(f"✓ Pipeline job created")
-    print(f"   Display name: xgboost-mlops-pipeline-v2")
+    print(f"   Display name: mlops-xgboost-pipeline-v4")
     print(f"   Parameter - bq_table: {BQ_TABLE}")
     
     # Submit
