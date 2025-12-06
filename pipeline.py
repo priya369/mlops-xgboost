@@ -342,7 +342,7 @@ def evaluate_model_component(
 
 # ============= PIPELINE DEFINITION =============
 @dsl.pipeline(
-    name='xgboost-mlops-pipeline-v2',
+    name='xgboost-mlops-pipeline-v3',
     description='XGBoost training pipeline with Vertex AI integration'
 )
 def xgboost_pipeline(
