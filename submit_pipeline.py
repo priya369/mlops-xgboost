@@ -84,7 +84,7 @@ try:
     
     # Create pipeline job
     job = aip.PipelineJob(
-        display_name='xgboost-mlops-pipeline-v2',
+        display_name='xgboost-mlops-pipeline-v3',
         template_path='pipeline.yaml',  # Use local YAML file
         pipeline_root=f'gs://{BUCKET_NAME}/pipeline_root/',
         parameter_values={
