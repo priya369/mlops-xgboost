@@ -72,9 +72,9 @@ try:
     
     # Initialize
     aip.init(
-        project=PROJECT_ID,
-        location=REGION,
-        staging_bucket=f'gs://{BUCKET_NAME}'
+        project='data-oasis-472909-u4',
+        location='us-central1',
+        staging_bucket= 'gs://data-oasis-472909-u4-mlops-bucket'
     )
     
     print(f"✓ Initialized Vertex AI")
